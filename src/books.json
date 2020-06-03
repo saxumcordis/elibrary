@@ -1,0 +1,30 @@
+[
+  {
+      "id": 1,
+      "name": "Sample",
+      "author": "Somebody",
+      "genre": "Tales",
+      "rate": 0
+  },
+  {
+      "id": 2,
+      "name": "Winter",
+      "author": "Ted",
+      "genre": "Fiction",
+      "rate": 0
+  },
+  {
+    "id": 3,
+    "name": "SuperBook",
+    "author": "Tom",
+    "genre": "Science",
+    "rate": 0
+  },
+  {
+    "id": 4,
+    "name": "BookTook",
+    "author": "Paul",
+    "genre": "Food",
+    "rate": 0
+  }
+]

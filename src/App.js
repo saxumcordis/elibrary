@@ -3,13 +3,12 @@ import {Header} from './Components/header.js';
 import {Catalog} from './Components/catalog.js';
 
 const App = () => {
-  const[a, setA] = React.useState(1)
+  const[favVisibility, setVisibility] = React.useState(false);
 
   return (
       <div>
-        <span>{a}</span>
-        {Header()}
-        {Catalog()}
+          <Header favVisibility={favVisibility} setVisibility={setVisibility}/>
+          {Catalog()}
       </div>
   )
 }

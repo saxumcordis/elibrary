@@ -61,3 +61,12 @@
 h1 {
     color:red;
 }
+
+.rateButtons > * {
+    width: 5px;
+    cursor: pointer;
+}
+
+.favorites {
+    list-style-type: none;
+}
