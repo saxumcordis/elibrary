@@ -3,28 +3,32 @@
       "id": 1,
       "name": "Sample",
       "author": "Somebody",
-      "genre": "Tales",
+      "publisher": "Tales",
+      "date": "12.12.1999",
       "rate": 0
   },
   {
       "id": 2,
       "name": "Winter",
       "author": "Ted",
-      "genre": "Fiction",
+      "publisher": "Fiction",
+      "date": "12.12.1998",
       "rate": 0
   },
   {
     "id": 3,
     "name": "SuperBook",
     "author": "Tom",
-    "genre": "Science",
+    "publisher": "Science",
+    "date": "12.12.1997",
     "rate": 0
   },
   {
     "id": 4,
     "name": "BookTook",
     "author": "Paul",
-    "genre": "Food",
+    "publisher": "Food",
+    "date": "12.12.1998",
     "rate": 0
   }
 ]

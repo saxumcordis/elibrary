@@ -7,7 +7,7 @@ const Header = (props) => {
     return (
         <nav className="header_nav">
             <h1>Welcome to the lib</h1>
-            <button onClick={() => props.setVisibility(!props.favVisibility)}>Избранное</button>
+            <button onClick={() => props.setVisibility(!props.favVisibility)}>Избранное (показать/скрыть)</button>
             {props.favVisibility ?
                 <Favorites className="favorites"></Favorites>
                 : null

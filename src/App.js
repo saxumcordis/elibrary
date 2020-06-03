@@ -8,7 +8,7 @@ const App = () => {
   return (
       <div>
           <Header favVisibility={favVisibility} setVisibility={setVisibility}/>
-          {Catalog()}
+          <Catalog favVisibility={favVisibility} setVisibility={setVisibility}/>
       </div>
   )
 }
