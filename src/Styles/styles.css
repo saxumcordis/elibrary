@@ -52,7 +52,6 @@
     border: 2px solid red;
     margin: 15px 0 0 0;
     text-align: center;
-    align-content: center;
 }
 
 .catalog_filter {
@@ -101,4 +100,6 @@ h3 {
     font-size: 12px;
     margin-top: 270px;
     height: auto;
+    margin-left: 28px;
+
 }

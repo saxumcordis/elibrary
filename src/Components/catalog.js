@@ -28,7 +28,7 @@ const Book = (props) => {
             <h1>{props.book.name}</h1>
             <h3>Rate: {rate}</h3>
             <h3>Date: {props.book.date.join('.')}</h3>
-            {rateVisibility && (!localStorage.getItem('myRates') || !JSON.parse(localStorage.getItem('myRates')).find(e => e == props.book.id)) ?
+            {rateVisibility && (!localStorage.getItem('myRates') || !JSON.parse(localStorage.getItem('myRates')).find(e => e.id == props.book.id)) ?
                 <span className="rateButtons"><p onClick={() => {
                     setRate(rate + 1);
                     setRateVisibility(false);
@@ -67,7 +67,7 @@ const updateBookRate = (id, newRate, mark) => {
     books.find(e => e['id'] == id)['rate'] = newRate;
     localStorage.setItem('books', JSON.stringify(books));
     const myRates = localStorage.getItem('myRates') ? JSON.parse(localStorage.getItem('myRates')) : [];
-    myRates.push({id: mark});
+    myRates.push({id: id, mark: mark});
     localStorage.setItem('myRates', JSON.stringify(myRates));
 };
 

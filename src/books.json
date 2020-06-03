@@ -30,5 +30,13 @@
     "publisher": "Food",
     "date": "12.12.1998",
     "rate": 0
+  },
+  {
+    "id": 5,
+    "name": "GoodBook",
+    "author": "Robert",
+    "publisher": "Took",
+    "date": "12.12.2000",
+    "rate": 0
   }
 ]
