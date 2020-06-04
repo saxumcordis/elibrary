@@ -22,7 +22,6 @@ const Book = (props) => {
     const [rate, setRate] = React.useState(props.book.rate);
     const [rateVisibility, setRateVisibility] = React.useState(true);
     const [favButtonVisible, setButtonVisible] = React.useState(true);
-    console.log(props.book.date.join('.'));
     return (
         <article className="catalog_book">
             <h1>{props.book.name}</h1>
@@ -49,7 +48,7 @@ const Book = (props) => {
                     props.favProps.setVisibility(!props.favProps.favVisibility);
                     setTimeout(props.favProps.setVisibility, 4, true);
                 }}>Добавить в избранное</button>
-                : <p className="favorite_button">В избранном</p>
+                : <p>В избранном</p>
             }
         </article>
     )
@@ -79,10 +78,16 @@ const sortBooks = (books, sign, direction = 0) => {
     else
         books.sort((a, b) => a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1);
     return direction == 0 ? books : books.reverse()
-}
+};
+
+const filterBooks = (sign, value) => {
+    if (sign != 'date')
+        return manageBooks().filter(book => book[sign] == value);
+    return manageBooks().filter(book => book.date[2] == value);
+};
 
 const Catalog = (props) => {
-    const books = manageBooks();
+    const books = props.filterValue ? filterBooks(props.filterSign, props.filterValue) : manageBooks();
     const [sortSign, setSortSign] = React.useState('name');
     const [order, setOrder] = React.useState(0);
 

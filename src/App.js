@@ -1,14 +1,19 @@
 import React from 'react';
 import {Header} from './Components/header.js';
 import {Catalog} from './Components/catalog.js';
+import {Filtered} from './Components/filtered.js';
 
 const App = () => {
   const[favVisibility, setVisibility] = React.useState(false);
+  const[filtered, setFiltered] = React.useState(true);
 
   return (
       <div>
           <Header favVisibility={favVisibility} setVisibility={setVisibility}/>
-          <Catalog favVisibility={favVisibility} setVisibility={setVisibility}/>
+          {!filtered ?
+              <Catalog favVisibility={favVisibility} setVisibility={setVisibility}/>
+              : <Filtered favVisibility={favVisibility} setVisibility={setVisibility}/>
+          }
       </div>
   )
 }
