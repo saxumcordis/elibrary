@@ -24,9 +24,13 @@ const Book = (props) => {
     const [favButtonVisible, setButtonVisible] = React.useState(true);
     return (
         <article className="catalog_book">
-            <h1>{props.book.name}</h1>
-            <h3>Rate: {rate}</h3>
-            <h3>Date: {props.book.date.join('.')}</h3>
+            <div className="book_data">
+                <h1>{props.book.name}</h1>
+                <h3>Rate: {rate}</h3>
+                <h3>Date: {props.book.date.join('.')}</h3>
+                <p>{props.book.author}</p>
+                <p>{props.book.publisher}</p>
+            </div>
             {rateVisibility && (!localStorage.getItem('myRates') || !JSON.parse(localStorage.getItem('myRates')).find(e => e.id == props.book.id)) ?
                 <span className="rateButtons"><p onClick={() => {
                     setRate(rate + 1);
@@ -42,13 +46,13 @@ const Book = (props) => {
                 : <span><p className="rated">Вы уже поставили оценку</p></span>
             }
             {(!localStorage.getItem('favs') || !JSON.parse(localStorage.getItem('favs')).find(e => e['id'] == props.book.id)) ?
-                <button className="favorite_button"onClick={() => {
+                <button className="favorite_button" onClick={() => {
                     addFavorite(props.book);
                     setButtonVisible(!favButtonVisible);
                     props.favProps.setVisibility(!props.favProps.favVisibility);
                     setTimeout(props.favProps.setVisibility, 4, true);
                 }}>Добавить в избранное</button>
-                : <p>В избранном</p>
+                : <p className="favorite_button">В избранном</p>
             }
         </article>
     )

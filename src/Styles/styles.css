@@ -64,6 +64,11 @@ body {
     text-align: center;
 }
 
+.book_data > p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .catalog_filter {
     flex-shrink: 0;
     width: 28%;
@@ -131,11 +136,13 @@ h3 {
 
 .catalog_book > .favorite_button {
     position: absolute;
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 270px;
-    height: auto;
-    margin-left: 28px;
+    width: 200px;
+    height: 25px;
     align-content: center;
+    text-align: center;
+    padding: 0 0;
 }
 
 .catalog_book > .favorite_button > p {

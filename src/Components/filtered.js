@@ -19,9 +19,6 @@ const Filtered = (props) => {
         books = books.map(book => book[filterSign]).sort();
     if (!books.includes(filterValue))
         setTempFilterValue(books[0]);
-    console.log(filterSign + " " + filterValue + " " + supportValue);
-    console.log(books);
-    console.log(+supportValue);
     return (<div className="catalog_main">
         <Catalog favVisibility={props.favVisibility} setVisibility={props.setVisibility} filterSign={filterSign}
                  filterValue={isFiltered ? books.includes(filterSign == 'date' ? +supportValue : supportValue) ? supportValue : filterValue : null}/>
