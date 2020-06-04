@@ -4,7 +4,7 @@ const Fav = (props) => {
     return (
         <article>
                 <h1>{props.book.name}</h1>
-                <h3>Rate: {props.book.rate}</h3>
+                <h3>Рейтинг: {props.book.rate}</h3>
             <button onClick={() => {
                 remove(props.book.id);
                 props.setFavs(JSON.parse(localStorage.getItem('favs')));

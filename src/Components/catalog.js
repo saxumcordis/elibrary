@@ -22,12 +22,13 @@ const Book = (props) => {
     const [rate, setRate] = React.useState(props.book.rate);
     const [rateVisibility, setRateVisibility] = React.useState(true);
     const [favButtonVisible, setButtonVisible] = React.useState(true);
+    props.book.date[0] = [props.book.date[1], props.book.date[1] = props.book.date[0]][0];
     return (
         <article className="catalog_book">
             <div className="book_data">
                 <h1>{props.book.name}</h1>
-                <h3>Rate: {rate}</h3>
-                <h3>Date: {props.book.date.join('.')}</h3>
+                <h3>Рейтинг: {rate}</h3>
+                <h3>Дата: {props.book.date.join('.')}</h3>
                 <p>{props.book.author}</p>
                 <p>{props.book.publisher}</p>
             </div>
