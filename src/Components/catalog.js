@@ -108,4 +108,4 @@ const Catalog = (props) => {
     )
 };
 
-export {Catalog}
+export {Catalog, manageBooks}

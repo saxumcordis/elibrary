@@ -1,5 +1,4 @@
 import React from 'react';
-import Styles from '../Styles/styles.css';
 
 const Fav = (props) => {
     return (

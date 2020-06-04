@@ -1,11 +1,9 @@
 import React from 'react';
-import Styles from '../Styles/styles.css';
 import data from '../books.json';
-import {Catalog} from './catalog.js';
+import {Catalog, manageBooks} from './catalog.js';
 
 const FilterField = (field, filterBooks, oldFilterValue) => {
-    let books = localStorage.getItem('books') ? JSON.parse(localStorage.getItem('books')) : data;
-    console.log(data);
+    let books = manageBooks();
     if (field == 'date')
         books = books.map(book => book.date[2]).sort((a, b) => a - b);
     else
