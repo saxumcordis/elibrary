@@ -16,9 +16,9 @@ body {
     position: relative;
 }
 .header_nav > button {
-    width: 96.5%;
+    width: 95.8%;
     position: relative;
-    margin-left: 23px;
+    margin-left: 28px;
     background: #a7d2ce;
 }
 
@@ -43,7 +43,7 @@ body {
 }
 
 .catalog_content > button {
-    margin-left: 20px;
+    margin-left: 25px;
     background: #f6f9f2;
 }
 
@@ -95,7 +95,7 @@ body {
 .filter_content {
     display: flex;
     flex-direction: column;
-    margin: 1px 0 1px 6px;
+    margin: 0px 0 0px 6px;
     width: 350px;
 }
 
